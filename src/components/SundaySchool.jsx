@@ -40,7 +40,7 @@ export default function SundaySchool() {
 
                     <p>
 
-                        The Orthodox Syrian Sunday School Association of the Idukki Diocese is a spiritual organization operating within the Diocese.
+                        The Orthodox Syrian Sunday School Association of the Diocese is a spiritual organization operating within the Diocese.
 
                         Its primary goal is to foster the spiritual development of children, imparting fundamental knowledge of the Orthodox Christian faith, traditions, and Biblical wisdom.
 

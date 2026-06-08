@@ -43,7 +43,7 @@ export default function Reports() {
                 <div className="report-left">
 
                     <h2>
-                        A Glimpse of Idukki Diocese's Wellbeing Initiatives
+                        A Glimpse of the Diocese's Wellbeing Initiatives
                     </h2>
 
                     <p>

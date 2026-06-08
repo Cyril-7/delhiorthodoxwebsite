@@ -76,7 +76,7 @@ export default function Navbar() {
                 <div className="navbar-top">
                     {/* LOGO */}
                     <Link to="/" className="logo-wrapper" onClick={closeMenu}>
-                        <img src="/images/photo1.png" alt="Diocese of Idukki Logo" className="logo" />
+                        <img src="/images/photo1.png" alt="Diocese Logo" className="logo" />
                         <div className="logo-text">
                             <span className="logo-text-main">Delhi Orthodox Diocese</span>
                             <span className="logo-text-sub">Malankara Orthodox Syrian Church</span>

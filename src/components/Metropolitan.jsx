@@ -72,7 +72,7 @@ export default function Metropolitan() {
 
             <p>
               Since Nov 3 2022, he has been entrusted
-              with leading the Idukki Diocese.
+              with leading the Diocese.
             </p>
 
           </div>

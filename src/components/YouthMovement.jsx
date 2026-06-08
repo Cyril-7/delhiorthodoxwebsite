@@ -43,7 +43,7 @@ export default function YouthMovement() {
 
                     <p>
 
-                        The Diocesan Orthodox Christian Youth Movement is the vibrant Youth-wing of the Idukki Diocese, celebrating 40 years of dynamic leadership and unwavering Christian commitment to both the Church and society at large.
+                        The Diocesan Orthodox Christian Youth Movement is the vibrant Youth-wing of the Diocese, celebrating 40 years of dynamic leadership and unwavering Christian commitment to both the Church and society at large.
 
                         Committed to promoting the welfare and advancement of the Church and community, it follows a three-fold path encompassing worship, study, and service.
 

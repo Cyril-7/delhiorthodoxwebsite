@@ -13,14 +13,14 @@ export default function Leadership() {
                 {/* Header */}
                 <div className="section-header fade-in">
                     <span className="section-eyebrow">
-                        Guiding Lights of Idukki Diocese
+                        Guiding Lights of the Diocese
                     </span>
                     <h2 className="section-title">
                         Our Spiritual <span>Leadership</span>
                     </h2>
                     <p className="section-subtitle">
                         Led by devoted shepherds who walk in the tradition of the Apostles,
-                        guiding the faithful of Idukki with wisdom and grace.
+                        guiding the faithful with wisdom and grace.
                     </p>
                 </div>
 

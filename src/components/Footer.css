@@ -1,0 +1,278 @@
+/* ================================================================
+   FOOTER — Diocese of Idukki
+================================================================ */
+
+.footer {
+    background: var(--clr-crimson-dk);
+    color: rgba(255, 255, 255, 0.8);
+    position: relative;
+}
+
+/* ---------- GOLD TOP BAR ---------- */
+.footer-gold-bar {
+    height: 4px;
+    background: linear-gradient(90deg, transparent, var(--clr-gold), var(--clr-gold-lt), var(--clr-gold), transparent);
+}
+
+/* ---------- MAIN SECTION ---------- */
+.footer-main {
+    padding: 72px var(--section-px) 56px;
+}
+
+.footer-container {
+    max-width: var(--container-max);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.6fr 1fr 1fr 1.2fr;
+    gap: 48px;
+}
+
+/* ---------- BRAND COLUMN ---------- */
+.footer-brand {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.footer-logo-wrap {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 20px;
+}
+
+.footer-logo {
+    width: 52px;
+    height: 52px;
+    object-fit: contain;
+    filter: brightness(1.1) drop-shadow(0 2px 6px rgba(0,0,0,0.3));
+}
+
+.footer-logo-name {
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    letter-spacing: 0.04em;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.footer-logo-sub {
+    font-family: var(--font-ui);
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--clr-gold-pale);
+    margin: 3px 0 0;
+}
+
+.footer-tagline {
+    font-family: var(--font-body);
+    font-size: 0.92rem;
+    font-style: italic;
+    color: rgba(255,255,255,0.6);
+    line-height: 1.75;
+    margin-bottom: 24px;
+}
+
+/* Social icons */
+.footer-socials {
+    display: flex;
+    gap: 10px;
+}
+
+.footer-social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border: 1px solid rgba(255,255,255,0.15);
+    color: rgba(255,255,255,0.6);
+    transition: all 0.25s ease;
+    text-decoration: none;
+}
+
+.footer-social:hover {
+    border-color: var(--clr-gold);
+    color: var(--clr-gold);
+    background: rgba(201, 144, 15, 0.1);
+}
+
+/* ---------- GENERIC COLUMN ---------- */
+.footer-col-title {
+    font-family: var(--font-ui);
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--clr-gold);
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+/* ---------- FOOTER LINKS ---------- */
+.footer-links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-links li a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--font-ui);
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.6);
+    text-decoration: none;
+    transition: color 0.2s ease, gap 0.2s ease;
+    letter-spacing: 0.02em;
+}
+
+.footer-links li a svg {
+    color: var(--clr-gold);
+    opacity: 0.6;
+    flex-shrink: 0;
+    transition: opacity 0.2s ease;
+}
+
+.footer-links li a:hover {
+    color: #fff;
+    gap: 12px;
+}
+
+.footer-links li a:hover svg {
+    opacity: 1;
+}
+
+/* ---------- CONTACT ---------- */
+.footer-contact-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.footer-contact-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-family: var(--font-ui);
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.6);
+    line-height: 1.5;
+}
+
+.footer-contact-icon {
+    color: var(--clr-gold);
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.footer-contact-list a {
+    color: rgba(255,255,255,0.6);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer-contact-list a:hover {
+    color: var(--clr-gold);
+}
+
+.footer-contact-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--font-ui);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--clr-gold);
+    border: 1px solid rgba(201, 144, 15, 0.4);
+    padding: 10px 20px;
+    text-decoration: none;
+    transition: all 0.25s ease;
+}
+
+.footer-contact-btn:hover {
+    background: var(--clr-gold);
+    color: var(--clr-ink);
+    border-color: var(--clr-gold);
+}
+
+/* ---------- BOTTOM BAR ---------- */
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.08);
+    padding: 20px var(--section-px);
+}
+
+.footer-bottom-inner {
+    max-width: var(--container-max);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.footer-copy {
+    font-family: var(--font-ui);
+    font-size: 0.72rem;
+    color: rgba(255,255,255,0.4);
+    letter-spacing: 0.03em;
+    margin: 0;
+}
+
+.footer-faith {
+    font-family: var(--font-body);
+    font-size: 0.82rem;
+    font-style: italic;
+    color: rgba(255,255,255,0.4);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0;
+}
+
+.footer-cross {
+    color: var(--clr-gold);
+    opacity: 0.6;
+    font-style: normal;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 1024px) {
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+
+    .footer-brand {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 640px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 36px;
+    }
+
+    .footer-brand {
+        grid-column: auto;
+    }
+
+    .footer-bottom-inner {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+}

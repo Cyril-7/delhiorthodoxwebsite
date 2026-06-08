@@ -1,0 +1,123 @@
+/* ================================================================
+   DAILY VERSE — Diocese of Idukki
+================================================================ */
+
+.verse-section {
+    background: linear-gradient(135deg, var(--clr-crimson-dk) 0%, var(--clr-crimson) 50%, var(--clr-crimson-md) 100%);
+    padding: 72px var(--section-px);
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+/* Decorative background pattern */
+.verse-section::before {
+    content: '✝';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 480px;
+    color: rgba(255,255,255,0.03);
+    pointer-events: none;
+    font-family: serif;
+    line-height: 1;
+}
+
+/* Subtle corner ornaments */
+.verse-section::after {
+    content: '';
+    position: absolute;
+    inset: 20px;
+    border: 1px solid rgba(255,255,255,0.08);
+    pointer-events: none;
+}
+
+.verse-inner {
+    max-width: 760px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.verse-ornament {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    margin-bottom: 28px;
+}
+
+.verse-ornament-line {
+    width: 48px;
+    height: 1px;
+    background: rgba(201, 144, 15, 0.6);
+}
+
+.verse-ornament-cross {
+    color: var(--clr-gold-pale);
+    font-size: 1.4rem;
+    line-height: 1;
+}
+
+.verse-label {
+    font-family: var(--font-ui);
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--clr-gold-pale);
+    opacity: 0.85;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.verse-text {
+    font-family: var(--font-body);
+    font-size: clamp(1.3rem, 2.5vw, 1.9rem);
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.95);
+    line-height: 1.7;
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+
+.verse-text::before {
+    content: '\201C';
+    font-size: 1.5em;
+    color: var(--clr-gold-pale);
+    line-height: 0;
+    vertical-align: -0.4em;
+    margin-right: 4px;
+}
+
+.verse-text::after {
+    content: '\201D';
+    font-size: 1.5em;
+    color: var(--clr-gold-pale);
+    line-height: 0;
+    vertical-align: -0.4em;
+    margin-left: 4px;
+}
+
+.verse-reference {
+    font-family: var(--font-ui);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--clr-gold);
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.verse-reference::before,
+.verse-reference::after {
+    content: '';
+    display: block;
+    width: 24px;
+    height: 1px;
+    background: var(--clr-gold);
+    opacity: 0.6;
+}

@@ -1,0 +1,129 @@
+/* ================================================================
+   PRIEST DIRECTORY PAGE — Diocese of Idukki
+================================================================ */
+
+.priest-page {
+    background: var(--clr-parchment);
+    min-height: 100vh;
+}
+
+.priest-hero {
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--clr-crimson-dk) 0%, var(--clr-crimson) 100%);
+}
+
+.priest-hero::before {
+    content: '✝';
+    position: absolute;
+    font-size: 350px;
+    color: rgba(255,255,255,0.04);
+    font-family: serif;
+}
+
+.priest-hero h1 {
+    position: relative;
+    z-index: 2;
+    font-family: var(--font-heading);
+    font-size: clamp(1.8rem, 5vw, 3rem);
+    font-weight: 600;
+    color: #fff;
+    letter-spacing: 0.04em;
+    text-align: center;
+}
+
+.priest-hero h1::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: var(--clr-gold);
+    margin: 12px auto 0;
+}
+
+.priest-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--section-py) var(--section-px);
+}
+
+.priest-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.priest-card {
+    background: var(--clr-ivory);
+    border: 1px solid var(--clr-border);
+    border-top: 3px solid var(--clr-gold);
+    text-align: center;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.priest-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 36px rgba(107,29,29,0.12);
+}
+
+.priest-card img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    object-position: top;
+    border-bottom: 1px solid var(--clr-border);
+    transition: transform 0.4s ease;
+}
+
+.priest-card:hover img {
+    transform: scale(1.04);
+}
+
+.priest-card h3 {
+    font-family: var(--font-heading);
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: var(--clr-crimson-dk);
+    margin: 14px 12px 6px;
+    letter-spacing: 0.02em;
+    line-height: 1.3;
+}
+
+.priest-card p {
+    font-family: var(--font-ui);
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--clr-gold);
+    margin: 0 12px 14px;
+}
+
+@media (max-width: 1024px) {
+    .priest-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .priest-hero {
+        height: 260px;
+    }
+
+    .priest-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .priest-grid {
+        grid-template-columns: 1fr;
+        max-width: 360px;
+        margin: 0 auto;
+    }
+}

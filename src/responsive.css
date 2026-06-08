@@ -1,0 +1,33 @@
+/* ================================================================
+   RESPONSIVE GLOBAL — Diocese of Idukki
+   Note: Component-specific responsive styles live in their own CSS files.
+   This file handles truly global overrides only.
+================================================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/* Ensure section padding uses CSS var (not !important override) */
+@media screen and (max-width: 1024px) {
+    .timeline-card {
+        width: auto;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .name-fields {
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,283 @@
+/* ================================================================
+   STORY SECTION — Diocese of Idukki
+================================================================ */
+
+.story-section {
+    background: var(--clr-parchment);
+    padding: var(--section-py) var(--section-px);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Decorative background cross removed */
+
+.story-container {
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+/* ---------- IMAGE COLUMN ---------- */
+.story-image-col {
+    position: sticky;
+    top: 120px;
+}
+
+.story-image-frame {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+/* Gold corner frames removed */
+
+.story-image {
+    width: 100%;
+    height: 520px;
+    object-fit: cover;
+    display: block;
+    border: 1px solid var(--clr-border);
+}
+
+/* Floating badge */
+.story-badge {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: var(--clr-crimson-dk);
+    color: #fff;
+    padding: 18px 22px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    z-index: 3;
+}
+
+.story-badge-icon {
+    font-size: 1.8rem;
+    color: var(--clr-gold-pale);
+    line-height: 1;
+}
+
+.story-badge-title {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--clr-gold-pale);
+    margin: 0;
+    line-height: 1.2;
+}
+
+.story-badge-sub {
+    font-family: var(--font-ui);
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.7);
+    margin: 0;
+}
+
+/* ---------- TEXT COLUMN ---------- */
+.story-text-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0;
+}
+
+.story-heading {
+    font-family: var(--font-heading);
+    font-size: clamp(1.8rem, 3vw, 2.6rem);
+    font-weight: 600;
+    color: var(--clr-crimson-dk);
+    line-height: 1.25;
+    margin-bottom: 16px;
+    letter-spacing: 0.02em;
+}
+
+.story-heading-em {
+    color: var(--clr-gold);
+    font-style: italic;
+    font-weight: 400;
+}
+
+.story-gold-line {
+    width: 60px;
+    height: 3px;
+    background: var(--clr-gold);
+    margin: 0 auto 24px auto;
+}
+
+.story-body {
+    font-family: var(--font-body);
+    font-size: 1.05rem;
+    color: var(--clr-ink-lt);
+    line-height: 1.85;
+    margin-bottom: 16px;
+}
+
+/* ---------- BLOCKQUOTE ---------- */
+.story-quote {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    background: var(--clr-parchment-dk);
+    border-left: 4px solid var(--clr-gold);
+    padding: 18px 22px;
+    margin: 20px 0 28px;
+    font-family: var(--font-body);
+    font-style: italic;
+    color: var(--clr-crimson-dk);
+    font-size: 1rem;
+    line-height: 1.7;
+    position: relative;
+}
+
+.story-quote-icon {
+    color: var(--clr-gold);
+    margin-bottom: 4px;
+    opacity: 0.8;
+}
+
+.story-quote cite {
+    font-family: var(--font-ui);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--clr-stone);
+    font-style: normal;
+}
+
+/* ---------- CTAS ---------- */
+.story-ctas {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* ---------- STATS BAND ---------- */
+.story-stats {
+    max-width: var(--container-max);
+    margin: 80px auto 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.story-stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 24px;
+    text-align: center;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+    border-bottom: 4px solid var(--clr-gold);
+    transition: transform 0.3s var(--ease-smooth), box-shadow 0.3s var(--ease-smooth), background 0.3s var(--ease-smooth);
+}
+
+.story-stat:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(107, 29, 29, 0.1);
+    background: var(--clr-crimson-dk);
+}
+
+.story-stat-value {
+    font-family: var(--font-heading);
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: var(--clr-crimson-dk);
+    letter-spacing: 0.02em;
+    line-height: 1;
+    margin-bottom: 12px;
+    transition: color 0.3s ease;
+}
+
+.story-stat:hover .story-stat-value {
+    color: var(--clr-gold-pale);
+}
+
+.story-stat-label {
+    font-family: var(--font-ui);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--clr-ink-lt);
+    transition: color 0.3s ease;
+}
+
+.story-stat:hover .story-stat-label {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* ---------- EXTENDED STORY ---------- */
+.story-extended {
+    max-width: 900px;
+    margin: 60px auto 0;
+    padding: 0 20px;
+}
+
+.story-extended-section {
+    margin-bottom: 40px;
+}
+
+.story-extended-heading {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--clr-crimson-dk);
+    margin-bottom: 16px;
+    border-bottom: 2px solid var(--clr-gold);
+    padding-bottom: 8px;
+    display: inline-block;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 1024px) {
+    .story-container {
+        gap: 48px;
+    }
+
+    .story-image {
+        height: 420px;
+    }
+}
+
+@media (max-width: 768px) {
+    .story-section::before {
+        display: none;
+    }
+
+    .story-badge {
+        bottom: 0;
+        right: 0;
+    }
+
+    .story-stats {
+        grid-template-columns: repeat(2, 1fr);
+        margin-top: 60px;
+        gap: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .story-stats {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .story-ctas {
+        flex-direction: column;
+    }
+
+    .story-ctas a {
+        justify-content: center;
+    }
+}

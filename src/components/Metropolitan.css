@@ -1,0 +1,265 @@
+/* ================================================================
+   METROPOLITAN PAGE — Diocese of Idukki
+================================================================ */
+
+.metro-page {
+    background: var(--clr-parchment);
+}
+
+/* ---------- HERO ---------- */
+.metro-hero {
+    height: 320px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--clr-crimson-dk) 0%, var(--clr-crimson) 100%);
+}
+
+.metro-hero::before {
+    content: '✝';
+    position: absolute;
+    font-size: 380px;
+    color: rgba(255,255,255,0.04);
+    font-family: serif;
+    line-height: 1;
+}
+
+.metro-hero::after {
+    content: '';
+    position: absolute;
+    inset: 20px;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    inset: 0;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(74,18,18,0.7), rgba(26,10,8,0.8));
+}
+
+.metro-hero h1 {
+    position: relative;
+    z-index: 2;
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 600;
+    color: #fff;
+    letter-spacing: 0.04em;
+    text-align: center;
+}
+
+.metro-hero h1::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: var(--clr-gold);
+    margin: 14px auto 0;
+}
+
+/* ---------- CONTENT SECTION ---------- */
+.metro-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--section-py) var(--section-px);
+}
+
+.metro-grid {
+    display: grid;
+    grid-template-columns: 340px 1fr;
+    gap: 56px;
+    align-items: start;
+}
+
+.metro-img {
+    width: 100%;
+    border: 1px solid var(--clr-border);
+    border-top: 4px solid var(--clr-gold);
+    box-shadow: 0 8px 40px rgba(107, 29, 29, 0.12);
+}
+
+.metro-text h2 {
+    font-family: var(--font-heading);
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    font-weight: 600;
+    color: var(--clr-crimson-dk);
+    margin-bottom: 16px;
+    letter-spacing: 0.02em;
+}
+
+.line {
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--clr-gold), var(--clr-gold-lt));
+    border-radius: 2px;
+    margin-bottom: 24px;
+}
+
+.metro-text p {
+    font-family: var(--font-body);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    margin-bottom: 16px;
+    color: var(--clr-ink-lt);
+}
+
+/* ---------- TIMELINE ---------- */
+.timeline {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: var(--section-py) var(--section-px);
+    position: relative;
+    overflow: hidden;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    width: 2px;
+    top: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, transparent, var(--clr-border-dk) 10%, var(--clr-border-dk) 90%, transparent);
+    transform: translateX(-50%);
+    z-index: 0;
+}
+
+.timeline-item {
+    display: flex;
+    align-items: center;
+    margin: 36px 0;
+    position: relative;
+    width: 100%;
+    z-index: 5;
+}
+
+.timeline-item:last-child::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    width: 40px;
+    height: 600px;
+    background: var(--clr-parchment);
+    transform: translateX(-50%);
+    top: 50%;
+    z-index: 1;
+}
+
+.left { justify-content: flex-start; }
+.right { justify-content: flex-end; }
+
+.timeline-card {
+    background: var(--clr-ivory);
+    padding: 22px 26px;
+    width: 44%;
+    border: 1px solid var(--clr-border);
+    border-top: 3px solid var(--clr-gold);
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    line-height: 1.65;
+    color: var(--clr-ink-md);
+    box-shadow: 0 4px 16px rgba(107,29,29,0.06);
+    transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.timeline-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 28px rgba(107,29,29,0.12);
+}
+
+.card-date {
+    display: block;
+    font-family: var(--font-ui);
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--clr-gold);
+    margin-bottom: 8px;
+}
+
+.dot {
+    width: 16px;
+    height: 16px;
+    background: var(--clr-gold);
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 0 0 4px var(--clr-parchment), 0 0 0 6px var(--clr-border-dk);
+    z-index: 10;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 992px) {
+    .metro-grid {
+        grid-template-columns: 1fr;
+        max-width: 600px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .line {
+        margin: 0 auto 24px;
+    }
+
+    .metro-img {
+        max-width: 300px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .timeline::before {
+        left: 26px;
+        transform: none;
+    }
+
+    .timeline-item {
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 56px 0;
+    }
+
+    .left, .right {
+        justify-content: flex-start;
+    }
+
+    .timeline-card {
+        width: calc(100% - 60px);
+        margin-left: 60px;
+        padding: 18px;
+    }
+
+    .dot {
+        position: absolute;
+        left: 26px;
+        transform: translateX(-50%);
+        top: 0;
+        z-index: 10;
+        width: 36px;
+        height: 36px;
+        background: var(--clr-parchment-dk);
+        border: 2px solid var(--clr-gold);
+    }
+
+    .timeline-item:last-child::after {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .metro-hero {
+        height: 260px;
+    }
+}

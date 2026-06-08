@@ -1,0 +1,112 @@
+/* ================================================================
+   YOUTH MOVEMENT PAGE — Diocese of Idukki
+================================================================ */
+
+.youth-page {
+    background: var(--clr-parchment);
+}
+
+.youth-hero {
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--clr-crimson-dk) 0%, var(--clr-crimson) 100%);
+}
+
+.youth-hero::before {
+    content: '✝';
+    position: absolute;
+    font-size: 350px;
+    color: rgba(255,255,255,0.04);
+    font-family: serif;
+    line-height: 1;
+}
+
+.youth-hero h1 {
+    position: relative;
+    z-index: 2;
+    font-family: var(--font-heading);
+    font-size: clamp(1.8rem, 5vw, 3rem);
+    font-weight: 600;
+    color: #fff;
+    letter-spacing: 0.04em;
+    text-align: center;
+}
+
+.youth-hero h1::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: var(--clr-gold);
+    margin: 12px auto 0;
+}
+
+.youth-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--section-py) var(--section-px);
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 56px;
+    align-items: start;
+}
+
+.youth-left h2 {
+    font-family: var(--font-heading);
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-weight: 600;
+    color: var(--clr-crimson-dk);
+    line-height: 1.3;
+    margin-bottom: 16px;
+}
+
+.youth-left p {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    line-height: 1.85;
+    color: var(--clr-ink-lt);
+    margin-bottom: 12px;
+}
+
+.main-image {
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+    border: 1px solid var(--clr-border);
+    border-top: 4px solid var(--clr-gold);
+    margin-bottom: 12px;
+    box-shadow: 0 8px 32px rgba(107,29,29,0.1);
+}
+
+.small-images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.small-images img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border: 1px solid var(--clr-border);
+    border-top: 3px solid var(--clr-gold);
+    transition: transform 0.3s ease;
+}
+
+.small-images img:hover {
+    transform: scale(1.03);
+}
+
+@media (max-width: 900px) {
+    .youth-content {
+        grid-template-columns: 1fr;
+    }
+
+    .youth-hero {
+        height: 260px;
+    }
+}

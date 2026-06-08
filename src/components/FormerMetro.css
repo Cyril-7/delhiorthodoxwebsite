@@ -1,0 +1,173 @@
+/* ================================================================
+   FORMER METROPOLITANS PAGE — Diocese of Idukki
+================================================================ */
+
+.former-page {
+    background: var(--clr-parchment);
+    min-height: 100vh;
+}
+
+.former-hero {
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--clr-crimson-dk) 0%, var(--clr-crimson) 100%);
+}
+
+.former-hero::before {
+    content: '✝';
+    position: absolute;
+    font-size: 350px;
+    color: rgba(255,255,255,0.04);
+    font-family: serif;
+}
+
+.former-hero h1 {
+    position: relative;
+    z-index: 2;
+    font-family: var(--font-heading);
+    font-size: clamp(1.8rem, 5vw, 3rem);
+    font-weight: 600;
+    color: #fff;
+    letter-spacing: 0.04em;
+    text-align: center;
+}
+
+.former-hero h1::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: var(--clr-gold);
+    margin: 12px auto 0;
+}
+
+/* Timeline */
+.former-timeline {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: var(--section-py) var(--section-px);
+    position: relative;
+}
+
+.center-line {
+    position: absolute;
+    left: 50%;
+    height: 100%;
+    width: 2px;
+    background: linear-gradient(to bottom, transparent, var(--clr-border-dk) 10%, var(--clr-border-dk) 90%, transparent);
+    transform: translateX(-50%);
+}
+
+.timeline-row {
+    display: flex;
+    align-items: center;
+    margin: 44px 0;
+    position: relative;
+}
+
+.timeline-card {
+    width: 43%;
+    background: var(--clr-ivory);
+    border: 1px solid var(--clr-border);
+    border-top: 3px solid var(--clr-gold);
+    padding: 24px;
+    text-align: center;
+    box-shadow: 0 4px 16px rgba(107,29,29,0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 32px rgba(107,29,29,0.12);
+}
+
+.timeline-card h2 {
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--clr-crimson-dk);
+    margin-bottom: 16px;
+    letter-spacing: 0.02em;
+}
+
+.timeline-card img {
+    width: 220px;
+    height: 260px;
+    object-fit: cover;
+    border: 1px solid var(--clr-border);
+    margin: 0 auto;
+}
+
+.timeline-middle {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    z-index: 5;
+}
+
+.circle {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background: var(--clr-gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    color: var(--clr-ink);
+    font-family: var(--font-ui);
+    font-weight: 700;
+    box-shadow: 0 0 0 4px var(--clr-parchment), 0 0 0 6px var(--clr-border-dk);
+}
+
+.year {
+    font-family: var(--font-heading);
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--clr-crimson-dk);
+    letter-spacing: 0.04em;
+}
+
+@media (max-width: 900px) {
+    .former-hero {
+        height: 260px;
+    }
+
+    .center-line {
+        left: 30px;
+        transform: none;
+    }
+
+    .timeline-row {
+        justify-content: flex-end;
+    }
+
+    .timeline-card {
+        width: calc(100% - 80px);
+    }
+
+    .timeline-middle {
+        left: 30px;
+        transform: none;
+    }
+
+    .timeline-card img {
+        width: 100%;
+        height: auto;
+        max-width: 220px;
+    }
+}
+
+@media (max-width: 480px) {
+    .center-line { left: 22px; }
+    .timeline-middle { left: 22px; }
+    .timeline-card { width: calc(100% - 55px); padding: 16px; }
+    .circle { height: 34px; width: 34px; font-size: 12px; }
+}

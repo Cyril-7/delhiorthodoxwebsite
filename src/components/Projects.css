@@ -1,0 +1,154 @@
+/* ================================================================
+   PROJECTS SECTION — Diocese of Delhi
+================================================================ */
+
+.projects-section {
+    background: var(--clr-ivory);
+    padding: var(--section-py) var(--section-px);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Background radial gradients removed */
+
+.projects-container {
+    max-width: var(--container-max);
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+/* ---------- GRID ---------- */
+.projects-grid {
+    display: grid;
+    /* 5 projects: 3 on row 1, 2 centred on row 2 */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-bottom: 48px;
+}
+
+/* ---------- PROJECT CARD ---------- */
+.project-card {
+    background: var(--clr-parchment);
+    border: 1px solid var(--clr-border);
+    padding: 30px 26px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    cursor: default;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.project-card:hover {
+    background: var(--clr-ivory);
+}
+
+/* Icon */
+.project-icon-wrap {
+    width: 52px;
+    height: 52px;
+    background: var(--clr-parchment-dk);
+    border: 1px solid var(--clr-border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+
+
+/* Text block */
+.project-card-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+/* Subtitle (small category label above title) */
+.project-subtitle {
+    font-family: var(--font-ui);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--clr-gold);
+    margin: 0;
+    line-height: 1.3;
+}
+
+/* Title */
+.project-name {
+    font-family: var(--font-heading);
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--clr-crimson-dk);
+    letter-spacing: 0.02em;
+    line-height: 1.3;
+}
+
+/* Description */
+.project-desc {
+    font-family: var(--font-body);
+    font-size: 0.88rem;
+    color: var(--clr-ink-lt);
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* Read more link */
+.project-learn {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-family: var(--font-ui);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--clr-crimson);
+    transition: gap 0.25s ease, color 0.25s ease;
+    margin-top: 4px;
+}
+
+.project-card:hover .project-learn {
+    gap: 10px;
+    color: var(--clr-gold);
+}
+
+/* ---------- CTA ---------- */
+.projects-cta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 1024px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .projects-cta {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .projects-cta a {
+        width: 100%;
+        max-width: 280px;
+        justify-content: center;
+    }
+}

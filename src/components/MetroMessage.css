@@ -1,0 +1,159 @@
+/* ================================================================
+   METROPOLITAN'S MESSAGE — Diocese of Delhi
+================================================================ */
+
+.metro-msg-section {
+    background: var(--clr-ivory);
+    padding: var(--section-py) var(--section-px);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Subtle parchment background texture removed */
+
+.metro-msg-container {
+    max-width: var(--container-max);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 72px;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+/* ---------- IMAGE COLUMN ---------- */
+.metro-msg-image-col {
+    position: relative;
+}
+
+.metro-msg-image-wrap {
+    position: relative;
+}
+
+/* Corner gold frames removed */
+
+.metro-msg-image {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    object-position: top;
+    display: block;
+    border: 1px solid var(--clr-border);
+}
+
+/* Name ribbon at bottom of image */
+.metro-msg-ribbon {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--clr-crimson-dk);
+    border-top: 3px solid var(--clr-gold);
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    z-index: 3;
+}
+
+.metro-msg-ribbon-cross {
+    font-size: 1.6rem;
+    color: var(--clr-gold-pale);
+    line-height: 1;
+    flex-shrink: 0;
+}
+
+.metro-msg-ribbon-name {
+    font-family: var(--font-heading);
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--clr-gold-pale);
+    margin: 0;
+    line-height: 1.25;
+}
+
+.metro-msg-ribbon-title {
+    font-family: var(--font-ui);
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.7);
+    margin: 3px 0 0;
+}
+
+/* ---------- TEXT COLUMN ---------- */
+.metro-msg-text-col {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.metro-msg-heading {
+    font-family: var(--font-heading);
+    font-size: clamp(1.8rem, 3vw, 2.6rem);
+    font-weight: 600;
+    color: var(--clr-crimson-dk);
+    line-height: 1.25;
+    margin-bottom: 16px;
+    letter-spacing: 0.02em;
+}
+
+.metro-msg-heading-gold {
+    color: var(--clr-gold);
+}
+
+.metro-msg-gold-line {
+    width: 60px;
+    height: 3px;
+    background: var(--clr-gold);
+    margin-bottom: 24px;
+}
+
+/* Decorative quote icon */
+.metro-msg-quote-icon {
+    color: var(--clr-gold);
+    opacity: 0.35;
+    margin-bottom: 4px;
+}
+
+.metro-msg-subheading {
+    font-family: var(--font-body);
+    font-size: 1.15rem;
+    font-weight: 500;
+    font-style: italic;
+    color: var(--clr-crimson-dk);
+    line-height: 1.5;
+    margin-bottom: 20px;
+    padding-left: 16px;
+    border-left: 3px solid var(--clr-gold);
+}
+
+.metro-msg-body {
+    font-family: var(--font-body);
+    font-size: 1.05rem;
+    color: var(--clr-ink-lt);
+    line-height: 1.85;
+    margin-bottom: 16px;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 1024px) {
+    .metro-msg-container {
+        gap: 48px;
+    }
+}
+
+@media (max-width: 768px) {
+    .metro-msg-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .metro-msg-image {
+        height: 320px;
+    }
+
+
+}

@@ -36,7 +36,7 @@ export default function Footer() {
                     {/* COL 1: Brand */}
                     <div className="footer-brand">
                         <div className="footer-logo-wrap">
-                            <img src="/images/logo.png" alt="Delhi Orthodox Diocese" className="footer-logo" />
+                            <img src="/images/photo1.png" alt="Delhi Orthodox Diocese" className="footer-logo" />
                             <div>
                                 <p className="footer-logo-name">Delhi Orthodox Diocese</p>
                                 <p className="footer-logo-sub">Malankara Orthodox Syrian Church</p>

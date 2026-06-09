@@ -54,7 +54,7 @@ export default function PrayerGroup() {
                 <div className="left-content">
 
                     <img
-                        src="/images/logo.png"
+                        src="/images/photo1.png"
                         alt=""
                         className="logo"
                     />
